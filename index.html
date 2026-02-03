@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Precision Industries - Precision Manufacturing & Engineering</title>
+    <meta name="description" content="Mars Precision Industries: Manufacturers & Suppliers of Special Engineering Machinery. Specializing in machining, fabrication, and precision manufacturing.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        :root {
+            --primary-navy: #003366;
+            --accent-orange: #FF6600;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333333;
+            --border-gray: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        .nav-fixed {
+            background-color: var(--primary-navy);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            margin-top: 70px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 51, 102, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 20px;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-orange);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-accent:hover {
+            background-color: #e55a00;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .bg-light-section {
+            background-color: var(--light-gray);
+        }
+
+        /* Form Styles */
+        .form-control, .form-select {
+            border: 2px solid var(--border-gray);
+            padding: 12px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--accent-orange);
+            box-shadow: none;
+        }
+
+        .upload-box {
+            border: 2px dashed var(--border-gray);
+            padding: 20px;
+            border-radius: 8px;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        .upload-box:hover {
+            border-color: var(--accent-orange);
+        }
+
+        /* Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            height: 100%;
+            transition: 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-color: var(--accent-orange);
+        }
+
+        .accent-icon {
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .checklist li {
+            padding: 10px 0 10px 40px;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .checklist li::before {
+            content: '\f058';
+            font-family: "Font Awesome 6 Free";
+            color: var(--accent-orange);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Clients */
+        .client-logos img {
+            max-width: 140px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        .client-logos img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            padding: 60px 0 20px;
+        }
+
+        footer h5 {
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark nav-fixed fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span style="color: var(--accent-orange);">MARS</span> PRECISION
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1 class="display-3 mb-3">Engineering Excellence</h1>
+                <p class="lead mb-5">High-Precision Manufacturing & Special Purpose Machinery Suppliers</p>
+                <div>
+                    <a href="#contact" class="btn btn-accent btn-lg me-3">Get a Quote</a>
+                    <a href="#services" class="btn btn-outline-light btn-lg">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4">About <span style="color: var(--accent-orange);">Us</span></h2>
+                    <p class="text-muted">At Mars Precision Industries, we specialize in high-precision mechanical engineering, machining, and fabrication. With decades of experience, we deliver custom solutions for special machinery, ensuring quality and reliability for B2B partners worldwide.</p>
+                    <p class="text-muted">Our state-of-the-art facilities and expert team make us a trusted leader in precision manufacturing, handling everything from prototype to large-scale production.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Factory" class="img-fluid rounded shadow shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="d-inline-block border-bottom border-primary border-3 pb-2">Our Core Services</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <i class="fas fa-cogs fa-3x accent-icon"></i>
+                        <h5>Special Machinery</h5>
+                        <p class="text-muted">Custom-built machinery tailored to unique industrial specifications.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <i class="fas fa-wrench fa-3x accent-icon"></i>
+                        <h5>Fabrication Works</h5>
+                        <p class="text-muted">Expert fabrication services for high-complexity structural assemblies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <i class="fas fa-drafting-compass fa-3x accent-icon"></i>
+                        <h5>Precision Machining</h5>
+                        <p class="text-muted">High-tolerance machining directly from your engineering drawings.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <i class="fas fa-fire fa-3x accent-icon"></i>
+                        <h5>Heat Treatment</h5>
+                        <p class="text-muted">Advanced thermal processing for enhanced material durability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <i class="fas fa-tools fa-3x accent-icon"></i>
+                        <h5>Grinding Services</h5>
+                        <p class="text-muted">Surface and cylindrical grinding for ultra-smooth industrial finishes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <i class="fas fa-cut fa-3x accent-icon"></i>
+                        <h5>Cutting Tools</h5>
+                        <p class="text-muted">Manufacturing of specialized cutting tools for heavy-duty apps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Partner With Us?</h2>
+            <ul class="checklist">
+                <li>Over 20 years of engineering expertise.</li>
+                <li>ISO-certified quality management.</li>
+                <li>State-of-the-art CNC & Manual machinery.</li>
+                <li>On-time delivery & Global shipping.</li>
+                <li>Competitive B2B wholesale pricing.</li>
+                <li>Dedicated post-sales technical support.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="clients" class="section bg-light-section">
+        <div class="container text-center">
+            <h2 class="mb-5">Trusted By Industry Leaders</h2>
+            <div class="row client-logos align-items-center g-5">
+                <div class="col-4 col-md-2"><img src="https://via.placeholder.com/150x80?text=LOGO+1" alt="Client"></div>
+                <div class="col-4 col-md-2"><img src="https://via.placeholder.com/150x80?text=LOGO+2" alt="Client"></div>
+                <div class="col-4 col-md-2"><img src="https://via.placeholder.com/150x80?text=LOGO+3" alt="Client"></div>
+                <div class="col-4 col-md-2"><img src="https://via.placeholder.com/150x80?text=LOGO+4" alt="Client"></div>
+                <div class="col-4 col-md-2"><img src="https://via.placeholder.com/150x80?text=LOGO+5" alt="Client"></div>
+                <div class="col-4 col-md-2"><img src="https://via.placeholder.com/150x80?text=LOGO+6" alt="Client"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Request A <span style="color: var(--accent-orange);">Quote</span></h2>
+                <p class="text-muted">Send us your technical drawings for a precision manufacturing estimate.</p>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="bg-light-section p-4 rounded h-100">
+                        <h4 class="mb-4">Contact Details</h4>
+                        <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Industrial Lane, State 12345</p>
+                        <p><i class="fas fa-phone me-2 text-primary"></i> +1 (123) 456-7890</p>
+                        <p><i class="fas fa-envelope me-2 text-primary"></i> santoshsahani808050@gmail.com</p>
+                        <hr>
+                        <h5>Operational Hours</h5>
+                        <p class="mb-1">Mon-Fri: 8:00 AM - 6:00 PM</p>
+                        <p>Sat: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <form action="https://formspree.io/f/santoshsahani808050@gmail.com" method="POST" enctype="multipart/form-data" class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Full Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Work Email</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Service Required</label>
+                            <select name="service" class="form-select">
+                                <option>Precision Machining</option>
+                                <option>Special Machinery Mfg</option>
+                                <option>Heat Treatment</option>
+                                <option>Fabrication</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Contact Number</label>
+                            <input type="tel" name="phone" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-bold">Upload Drawing/Blueprints (PDF/CAD)</label>
+                            <div class="upload-box">
+                                <input type="file" name="upload" class="form-control">
+                                <small class="text-muted">Please upload technical drawings for accurate pricing.</small>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-bold">Project Details</label>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Describe materials, tolerances, and quantities..."></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-accent w-100 py-3">SEND INQUIRY <i class="fas fa-paper-plane ms-2"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>MARS PRECISION</h5>
+                    <p>Providing precision engineering solutions since 2003. We bridge the gap between design and reality.</p>
+                </div>
+                <div class="col-md-4 text-md-center">
+                    <h5>Connect</h5>
+                    <div class="fs-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5>Compliance</h5>
+                    <small class="text-uppercase text-secondary">GSTIN: 22AAAAA0000A1Z5</small>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <p class="text-center mb-0 mt-4">&copy; 2026 Mars Precision Industries. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
